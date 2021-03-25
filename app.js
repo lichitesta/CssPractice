@@ -1,0 +1,1 @@
+// En esta ocacion no voy a utilizar Js por que estoy realizando un repaso de css pero lo coloco de todas maneras para mantener las buenas practicas como costumbre

@@ -1,5 +1,268 @@
+/* utilizando un asterisco como selector afectamos a todos los elementos de nuestra web por ejemplo para reiniciar los margenes y el padding a 0 podemos utilizar el siguiente fragmento de codigo:
+*{
+
+    padding: 0%;
+    margin: 0%;
+}
+*/
+
+.clr{
+    /* Limpia todos los floats que tiene ensima */
+clear: both;
+}
+
+
 body{
 background-color: black;
 color: whitesmoke;
+margin: 0%;
+}
+/* para cambiar el color con alguna propiedad podemos colocar como valor = 
+1) El Nombre del color 2) Nombres de color Html5 (coral por ejemplo) 3)Hexadecimal  4)RGB */
+h1{
+    color: red;
+    color: coral;
+    color: #00ff00;
+    color: rgb(255, 255, 255);
+}
+p{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    /* igual que la forma anterior */
+    font: normal 16px Arial, Helvetica, sans-serif;
+ /* line-height se utiliza para definir el esacio que ahi entre un reglon y otro */
+    line-height: 1.5em;
+}
+.box-1{
+background-color: #333;
+color: #fff;
+border: 5px red solid;
+/* 
+Tambien se puede definir cada uno por separado de la siguiente manera:
+border-right: 5px red solid;
+border-left: 5px red solid;
+border-top: 5px red solid;
+border-bottom: 5px red solid;
+*/
+border-top-style: dashed;
+
+
+/* En el padding aplica el mismo principio que en los bordes o margenes podemos asignarles un valor individual a cada uno o simplemnte uno global para todos como a continuacion:*/
+padding: 20px;
+margin: 20px 0;
+}
+
+.container{
+width: 80%;
+margin: auto; /* El valor de margin auto le coloca automaticamente el mismo margen entodos los lados*/
+}
+
+/* Margenes
+Podemos dedemos asignar los espacios del margin  o margen de 4 formas diferentes
+1)
+Asignando a cada uno de los margenes su valor por separado
+p{
+ margin-top: 5px;
+ margin-bottom: 5px;
+ margin-right: 10px;
+ margin-left: 10px;
+}
+
+2)
+Asignando los valores en el sentido de las agujas del reloj comenzando con el topmargin y terminando con el leftmargin
+p{
+ margin: 5px 10px 5px 10px;
+}
+
+3)
+Si los valores de los pares de margenes derecha - izquierda y arriba -abajo son iguales podemos asignarlos de la siguiente menera
+p{
+ margin:5px 10px;
+}
+
+3)
+Si los valores de todos los margenes son iguales se asigna de la siguiente manera
+p{
+ margin:10px;
+}
+
+*/
+
+/* Para seleccionar un elemento especifico que se encuentre dentro de la clase primero se coloca la clase luego un espacio y elemento que se quiere modificar*/
+ .box-1 h1{
+     /*Algunos ejemplos de propiedades que modifican los textos */
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-style: italic;
+font-weight: 800;
+text-decoration:underline;
+text-transform: uppercase;
+text-transform: uppercase;
+text-transform: initial;
+letter-spacing: 0.3em;
+word-spacing: 1.2em;
+ }
+
+ .box-2{
+
+    border: 3px dotted #ccc;
+    padding: 20px;
+    margin: 20px 0;
+ }
+
+ .categorias{
+border: 1px #ccc solid;
+padding: 10px;
+border-radius: 17px;
+ }
+
+ .categorias h2{
+text-align: center;
+
+ }
+
+ .categorias ul{
+padding: 0;
+list-style: square;
+list-style: none;
+ }
+
+a{
+color:whitesmoke;
+text-decoration: none;
+ }
+
+ /*podemos definir el cambio de ciertas propiedades cuando se de un evento en dicho elemento como por ejemplo que cambie de color cuando se le coloca el mouse encima*/
+/* se coloca el selector luego : y luego el evento que lo dispara */
+ a:hover{
+color: yellow;
+ }
+ /*O cuando le haces click encima por ejemplo con el evento active*/
+a:active{
+    color: blue;
+}
+.categorias li {
+padding-bottom: 5px;
+border-bottom: dotted 1px #333;
+}
+
+/* formulario */
+
+.formulario{
+padding : 20px;
+}
+
+.formulario .form-group{
+    margin: 14px;
+}
+
+.formulario .form-group label{
+  display: block;
+}
+ /*    
+ Lo que vemos a continuacion es priemro seleccionar los inputs de type ="text" 
+ que se encuentran dentro de la clas form-group que a la vez se encuentra dentro de la clase formulario
+ luego con una coma concatenamos a todos los textareas que se encuentran dentro de la clase formulario
+ para poder aplicar el mismo estilo para ambos elementos
+ */
+.formulario .form-group input[type = "text"] , .formulario textarea{
+  padding: 8px;
+  width: 100%;
+}
+
+.button{
+ background-color: #ccc;
+ color: #fff;
+ padding: 10px 15px;
+ border:none;
+}
+
+.button:hover{
+background-color: white;
+color: red;
+}
+
+.block{
+float: left;
+width: 33%;
+border: 1px solid #ccc;
+padding: 10px;
+/* 
+Si lo dejamos asi se va a desorganizar por que el 1px extra del borde y los 10px del padding no estan contemplados
+cuando se defiño el width en 33px por lo cual se va a salir de los margenes y desorganizarse 
+Una solucion a esto es utilizar la propiedad box-sizing y incluir como valor al border-box para poder integrar los bordes y el padding dentro del width original de 33%
+*/
+box-sizing: border-box;
+}
+
+#main-block{
+float:left;
+width: 70%;
+padding: 15px;
+box-sizing: border-box;
+}
+
+
+#sidebar{
+    float:right;
+    width: 30%;
+    background-color: #333;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.p-box{
+margin: 20px 0;
+width: 600px;
+height: 500px;
+border: 1px solid white;
+position: relative;
+background-image: url('https://wallpaperaccess.com/full/951548.jpg');
+background-position: center center;
+}
+
+/* Posicionamiento
+repaso de diferentes formas de posicionar los elementos
+
+
+En el siguiente caso al poner la posicion como absoluta y no relativa el h1 se va 
+a posicionar a 40px del principio de la web sobreposniendose a otros elementos
+*/
+
+.p-box h1{
+ position: absolute;
+ top: 40px;
+}
+
+/* Para que esto no suceda ponemos la posicion como relativa/relative en el elemento contenedor que es el .p-box */
+.p-box{
+    position: relative;
+}
+
+
+.p-box h1{
+    position: absolute;
+    top: 100px;
+    left: 200px;
+   }
+
+
+.p-box h2{
+position:   absolute;
+bottom: 40px;
+right: 100px;
+}
+
+/* Otro posicionamiento es el fixed que hace que un elemento se ancle en un punto de la pantalla y no se mueva por mas que el usuario scrolee en la misma */
+/* Lo voy a comentar para que no sea molesto
+.fix-me{
+position: fixed;
+top: 300px;
 
 }
+
+*/
+
+
+
