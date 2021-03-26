@@ -264,5 +264,25 @@ top: 300px;
 
 */
 
+/* 
+Podemos seleccionar el primer elemento de una lsita utilizando el selector li:first-child o el ultimo utilizando el selector li:last-child
 
+*/
+.lista li:first-child{
+background:red;
+}
 
+.lista li:last-child{
+background: blue;
+}
+/* tambien se puede seleccionar un elemento en particual con el selector li:nth-child() entre los parentessis se coloca la posicion que se requiere aplicar estilo*/
+
+.lista li:nth-child(5){
+background: yellow;
+}
+
+/* tambien se puede colocar las palabra reservada even o odd para seleccionar los pares o impares*/
+
+.lista li:nth-child(even){
+    background: rgb(89, 219, 121);
+    }
